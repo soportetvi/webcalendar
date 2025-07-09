@@ -18,7 +18,7 @@ controllers = Blueprint('controllers', __name__)
 @controllers.route('/')
 def index():
     year = request.args.get('year', datetime.now().year, type=int)
-    apartament = request.args.get('apartament', 204, type=int)
+    apartament = request.args.get('apartament', 304, type=int)
     maintenance_path = apartament_maintenance_path.get(apartament, 1)
     weekday_calendar_starts = apartament_weekday_calendar_starts.get(apartament, 1)
 
